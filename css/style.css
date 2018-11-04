@@ -1,0 +1,561 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0; }
+
+.main-container {
+  overflow-x: hidden; }
+
+.container {
+  position: relative;
+  width: 1170px;
+  margin: auto; }
+  @media (max-width: 1170px) {
+    .container {
+      width: 100%; } }
+
+a {
+  color: white; }
+
+.num-wr {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1; }
+  .num-wr .num {
+    display: inline-block;
+    font-size: 286px;
+    font-family: 'Yantramanav', sans-serif;
+    font-weight: 900;
+    color: rgba(255, 255, 255, 0.02);
+    letter-spacing: -16px; }
+  .num-wr .num-sub {
+    position: absolute;
+    display: inline-block;
+    font-size: 34px;
+    font-family: 'Raleway', sans-serif;
+    color: #fff;
+    font-weight: 100;
+    letter-spacing: 1px;
+    transform: rotate(-90deg); }
+
+body {
+  overflow-x: hidden;
+  max-width: 1920px;
+  margin: auto;
+  font-family: 'Raleway', sans-serif;
+  background-color: #191e3f;
+  /*              Global Styles	      */
+  /*         -------------	      */ }
+  body .lBlock {
+    max-width: 660px;
+    height: 660px;
+    background-color: #191e3f;
+    box-shadow: 0px 178px 152px 0px rgba(0, 0, 0, 0.45); }
+  body .sBlock {
+    background-color: #191e3f;
+    box-shadow: 0px 178px 152px 0px rgba(0, 0, 0, 0.45);
+    width: inherit;
+    height: 400px;
+    z-index: 58; }
+  body .desc {
+    color: #fff;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 100;
+    font-size: 19px; }
+  body .subdesc {
+    color: #fff;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 100;
+    font-size: 15px; }
+  body h3 {
+    color: #fff;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 100;
+    font-size: 38px; }
+    @media (max-width: 800px) {
+      body h3 {
+        font-size: 36px; } }
+  body h4 {
+    color: #fff;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 100;
+    font-size: 19px;
+    opacity: .5; }
+  body header {
+    height: 1000px;
+    width: 100%;
+    background-image: url("../img/header-bg.png");
+    background-position: top;
+    background-size: 100%;
+    background-repeat: no-repeat; }
+    body header #clickMenu:checked ~ .menuBlock {
+      display: inline-flex; }
+    body header #clickMenu:checked ~ .menu {
+      background-image: url("../img/close.svg");
+      background-size: 120%;
+      background-position: center; }
+    body header .menu {
+      position: fixed;
+      right: 30px;
+      top: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 101;
+      line-height: 90px;
+      width: 90px;
+      height: 90px;
+      text-align: center;
+      /*			transition: .2s ease-out;*/
+      cursor: pointer;
+      background-image: url("../img/menu.svg");
+      background-position: center;
+      width: 46px;
+      height: 46px;
+      background-repeat: no-repeat; }
+    @media (max-width: 800px) {
+      body header {
+        top: 0; } }
+    body header img {
+      width: 47px;
+      height: auto; }
+  body .menuBlock {
+    width: 300px;
+    height: 100vh;
+    position: fixed;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    top: 0;
+    right: 0;
+    z-index: 100;
+    background-color: #121631;
+    box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.25); }
+    @media (max-width: 600px) {
+      body .menuBlock {
+        width: 100%; } }
+    body .menuBlock .contactUs {
+      width: 80%;
+      height: 48px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      bottom: 30px;
+      border: 1px solid #4F5BAD;
+      box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.25); }
+      @media (max-height: 400px) {
+        body .menuBlock .contactUs {
+          position: static; } }
+    body .menuBlock a {
+      text-decoration: none;
+      margin: 20px 0px;
+      font-weight: 200;
+      font-size: 18px;
+      transition: .1s; }
+      @media (max-height: 400px) {
+        body .menuBlock a {
+          margin: 15px 0px; } }
+      body .menuBlock a:hover {
+        opacity: .8; }
+  body .container {
+    padding-top: 85px; }
+  body h1 {
+    font-size: 76px;
+    font-weight: 200;
+    color: white;
+    text-align: center;
+    margin-top: 12rem;
+    margin-right: 40px;
+    margin-left: 40px; }
+    @media (max-width: 800px) {
+      body h1 {
+        font-size: 50px;
+        margin-right: 20px;
+        margin-left: 20px;
+        margin-top: 8rem; } }
+
+nav {
+  width: 100%; }
+  nav .logo {
+    margin: auto;
+    width: 130px;
+    height: 90px; }
+    nav .logo img {
+      width: 100%; }
+
+.mission {
+  /*	margin-top: 200px;
+	@media (max-width: 600px) {
+		margin-top: 100px;
+	}
+	*/ }
+  .mission .container {
+    position: relative;
+    height: 660px; }
+    .mission .container .lBlock {
+      position: absolute;
+      display: inline-block;
+      left: 240px;
+      right: 0;
+      z-index: 13;
+      background-image: url("../img/mountains.png");
+      background-size: cover;
+      /*	background-position: center;*/ }
+      @media (max-width: 920px) {
+        .mission .container .lBlock {
+          top: 0;
+          left: 0;
+          bottom: 0;
+          right: 0;
+          margin: 0 auto; } }
+      @media (max-width: 660px) {
+        .mission .container .lBlock {
+          max-width: 660px; } }
+    .mission .container .num-wr {
+      margin-right: -24px;
+      top: 200px; }
+      @media (max-width: 920px) {
+        .mission .container .num-wr {
+          position: absolute;
+          margin-right: -24px;
+          z-index: 20; } }
+      @media (max-width: 800px) {
+        .mission .container .num-wr {
+          top: -20px; }
+          .mission .container .num-wr .num {
+            color: rgba(255, 255, 255, 0.05); } }
+    .mission .container p {
+      top: 300px;
+      position: absolute;
+      max-width: 470px;
+      padding: 16px;
+      right: 0;
+      z-index: 14; }
+
+.letter {
+  font-family: 'Raleway', sans-serif;
+  font-size: 1296px;
+  font-weight: 900;
+  color: #191e3f;
+  color: #191e3f;
+  text-shadow: 0px 178px 152px rgba(0, 0, 0, 0.45);
+  position: absolute;
+  opacity: .6; }
+  @media (max-width: 900px) {
+    .letter {
+      /*display: none;*/ } }
+
+.projects {
+  margin-top: 300px;
+  padding-top: 70px;
+  width: 100%;
+  background-image: url("../img/projects.png");
+  background-position: top;
+  /*	background-size: 100%;*/
+  height: 1300px;
+  background-repeat: no-repeat;
+  background-blend-mode: lighten; }
+  @media (max-width: 650px) {
+    .projects .container {
+      text-align: center; }
+      .projects .container .num-wr {
+        float: none;
+        top: -80px; } }
+  @media (max-width: 920px) {
+    .projects {
+      background-size: none; } }
+  .projects .letter {
+    top: -340px;
+    left: -200px;
+    z-index: 10; }
+  .projects .partners {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 960px;
+    position: absolute;
+    z-index: 11;
+    top: 200px; }
+    @media (max-width: 1100px) {
+      .projects .partners {
+        top: 280px; } }
+    @media (max-width: 650px) {
+      .projects .partners {
+        justify-content: center; } }
+    .projects .partners div {
+      position: relative;
+      margin: 30px 15px;
+      width: 280px;
+      height: 100px;
+      background-position: center;
+      background-size: 80%;
+      background-repeat: no-repeat; }
+      @media (max-width: 650px) {
+        .projects .partners div {
+          width: 200px;
+          height: 80px;
+          margin: 10px 10px; } }
+    .projects .partners .part1 {
+      background-image: url("../img/part1.png"); }
+    .projects .partners .part2 {
+      background-image: url("../img/part2.png"); }
+    .projects .partners .part3 {
+      background-image: url("../img/part3.png"); }
+    .projects .partners .part4 {
+      background-image: url("../img/part4.png"); }
+    .projects .partners .part5 {
+      background-image: url("../img/part5.png"); }
+    .projects .partners .part6 {
+      background-image: url("../img/part6.png"); }
+  .projects .num-wr {
+    float: right;
+    z-index: 11; }
+
+.team {
+  /*min-height: 2200px;*/
+  position: relative; }
+  .team .whiteline {
+    width: 56px;
+    height: 5px;
+    background-color: #fff; }
+  .team .subdesc {
+    width: 320px; }
+  .team h3 {
+    margin: 32px 0 16px 0;
+    white-space: nowrap; }
+  .team h4 {
+    margin-bottom: 48px;
+    white-space: nowrap; }
+  .team .num-wr {
+    vertical-align: top;
+    margin-top: -100px; }
+  .team .george {
+    text-align: center;
+    display: inline-block;
+    margin-left: 200px;
+    position: relative;
+    z-index: 10; }
+    .team .george .card-info {
+      text-align: left;
+      position: absolute;
+      z-index: 30;
+      left: -160px;
+      bottom: 60px; }
+    .team .george .lBlock div {
+      width: 660px;
+      height: 660px;
+      background-image: url("../img/george.png");
+      opacity: .2; }
+      @media (max-width: 650px) {
+        .team .george .lBlock div {
+          max-width: 660px; } }
+  .team .letter {
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 810px;
+    top: 300px;
+    /* bottom: 0; */
+    margin: auto;
+    z-index: 1; }
+  .team .kenneth {
+    position: relative;
+    display: inline-block;
+    float: left;
+    margin-top: 160px;
+    margin-right: 20px;
+    vertical-align: top;
+    z-index: 10; }
+    .team .kenneth .card-info {
+      position: absolute;
+      text-align: left;
+      display: inline-block;
+      left: 340px;
+      top: 200px; }
+      @media (max-width: 1100px) {
+        .team .kenneth .card-info {
+          left: 100px; } }
+    .team .kenneth .sBlock {
+      display: inline-block; }
+      .team .kenneth .sBlock div {
+        width: 400px;
+        height: 400px;
+        background-image: url("../img/kenneth.png");
+        opacity: .2; }
+  .team .richard {
+    position: relative;
+    float: right;
+    display: inline-block;
+    right: 0;
+    margin-top: 280px;
+    margin-left: 20px;
+    z-index: 10; }
+    .team .richard .card-info {
+      position: absolute;
+      text-align: left;
+      display: inline-block;
+      left: -100px;
+      top: 240px; }
+      @media (max-width: 1100px) {
+        .team .richard .card-info {
+          left: -40px; } }
+    .team .richard .sBlock {
+      display: inline-block; }
+      .team .richard .sBlock div {
+        width: 400px;
+        height: 400px;
+        background-image: url("../img/richard.png");
+        opacity: .2; }
+  .team .clear {
+    clear: both; }
+  .team .judith {
+    position: relative;
+    display: inline-block;
+    margin-left: 100px;
+    margin-right: 20px;
+    margin-top: 170px;
+    z-index: 10; }
+    @media (max-width: 1100px) {
+      .team .judith {
+        margin-left: 30px;
+        margin-top: 0px; } }
+    .team .judith .card-info {
+      position: absolute;
+      text-align: left;
+      display: inline-block;
+      left: -100px;
+      top: 240px; }
+      @media (max-width: 1100px) {
+        .team .judith .card-info {
+          left: 20px; } }
+    .team .judith .sBlock {
+      display: inline-block; }
+      .team .judith .sBlock div {
+        width: 400px;
+        height: 400px;
+        background-image: url("../img/judith.png");
+        opacity: .2; }
+  .team .donald {
+    position: relative;
+    float: right;
+    display: inline-block;
+    margin-right: 100px;
+    margin-top: 360px;
+    z-index: 10; }
+    @media (max-width: 1100px) {
+      .team .donald {
+        margin-right: 30px;
+        margin-top: 120px; } }
+    .team .donald .card-info {
+      position: absolute;
+      text-align: left;
+      display: inline-block;
+      left: 160px;
+      top: 240px; }
+      @media (max-width: 1100px) {
+        .team .donald .card-info {
+          left: 40px; } }
+    .team .donald .sBlock {
+      display: inline-block; }
+      .team .donald .sBlock div {
+        width: 400px;
+        height: 400px;
+        background-image: url("../img/donald.png");
+        opacity: .2; }
+
+.event {
+  margin-top: 400px;
+  background-color: #191e3f;
+  background-image: url("../img/events.png");
+  background-position: bottom;
+  height: 1300px;
+  background-repeat: no-repeat;
+  background-blend-mode: color-dodge; }
+  @media (max-width: 1100px) {
+    .event {
+      margin-top: 300px; } }
+  @media (max-width: 900px) {
+    .event {
+      margin-top: 200px; } }
+  .event .feel {
+    display: block; }
+    @media (max-width: 900px) {
+      .event .feel {
+        margin: 0 40px;
+        position: relative;
+        z-index: 10; } }
+    .event .feel h1 {
+      font-size: 72px;
+      font-weight: 200;
+      color: white;
+      font-family: 'Raleway', sans-serif; }
+    .event .feel .desc {
+      max-width: 480px;
+      margin-top: 40px;
+      line-height: 24px; }
+  .event .num-wr {
+    display: flex;
+    z-index: 8; }
+  .event .letter {
+    position: absolute;
+    right: -140px;
+    top: -320px;
+    z-index: 1; }
+    @media (max-width: 900px) {
+      .event .letter {
+        opacity: 0.4; } }
+
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  height: 60px;
+  top: -160px;
+  font-size: 15px;
+  font-weight: 200;
+  color: white;
+  font-family: 'Raleway', sans-serif; }
+  footer .f-logo img {
+    width: 90px;
+    opacity: .2; }
+  footer .f-menu {
+    margin: 28px 0 12px 0; }
+    footer .f-menu a {
+      margin: 0 10px; }
+
+@media (max-width: 900px) {
+  .team {
+    text-align: center; }
+    .team .richard, .team .judith, .team .donald, .team .kenneth {
+      display: block;
+      float: none;
+      margin-top: 40px;
+      margin: 40px auto;
+      max-width: 400px; }
+      .team .richard .sBlock, .team .judith .sBlock, .team .donald .sBlock, .team .kenneth .sBlock {
+        display: block; }
+        .team .richard .sBlock div, .team .judith .sBlock div, .team .donald .sBlock div, .team .kenneth .sBlock div {
+          max-width: 400px;
+          width: auto; }
+      .team .richard .card-info, .team .judith .card-info, .team .donald .card-info, .team .kenneth .card-info {
+        left: 20px;
+        bottom: 0;
+        top: auto; }
+    .team .num-wr {
+      margin: auto; }
+    .team .george {
+      display: block;
+      margin: auto;
+      max-width: 660px; }
+      .team .george .lBlock div {
+        max-width: 660px;
+        width: auto;
+        background-position: center; }
+      .team .george .card-info {
+        left: 40px;
+        bottom: 40px; } }

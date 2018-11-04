@@ -1,0 +1,885 @@
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+.main-container {
+	overflow-x: hidden;
+}
+
+$raleway: "font-family: 'Raleway', sans-serif";
+
+.container {
+	position: relative;
+	width: 1170px;
+	margin: auto;
+
+	@media (max-width: 1170px) {
+
+		width: 100%;
+
+	}	
+}
+
+a {
+	color: white;
+}
+
+
+.num-wr {
+	position: relative;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	z-index: 1;
+
+
+	.num {
+		display: inline-block;
+		font-size: 286px;
+		font-family: 'Yantramanav', sans-serif;
+		font-weight: 900;
+		color: rgba(255, 255, 255, .02);
+		letter-spacing: -16px;
+	}
+
+	.num-sub {
+		position: absolute;
+		display: inline-block;
+		font-size: 34px;
+		font-family: 'Raleway', sans-serif;
+		color: #fff;
+		font-weight: 100;
+		letter-spacing: 1px;
+		transform: rotate(-90deg);
+	}
+
+}
+
+body {
+	overflow-x: hidden;
+	max-width: 1920px;
+	margin: auto;
+	font-family: 'Raleway', sans-serif;
+	background-color: #191e3f;
+
+	/*              Global Styles	      */
+	
+	.lBlock {
+		max-width: 660px;
+		height: 660px;
+		background-color: rgb(25, 30, 63);
+		box-shadow: 0px 178px 152px 0px rgba(0, 0, 0, 0.45);
+
+
+
+
+	}
+
+	.sBlock {
+
+		background-color: rgb(25, 30, 63);
+		box-shadow: 0px 178px 152px 0px rgba(0, 0, 0, 0.45);
+		width: inherit;
+		height: 400px;
+		z-index: 58;
+
+	}
+
+	.desc {
+		color: #fff;
+		font-family: 'Raleway', sans-serif;
+		font-weight: 100;
+		font-size: 19px;
+	}
+	.subdesc {
+		color: #fff;
+		font-family: 'Raleway', sans-serif;
+		font-weight: 100;
+		font-size: 15px;
+	}
+
+
+	h3 {
+		color: #fff;
+		font-family: 'Raleway', sans-serif;
+		font-weight: 100;
+		font-size: 38px;
+
+		@media (max-width: 800px) {
+			font-size: 36px;
+		}
+	}
+
+	h4 {
+		color: #fff;
+		font-family: 'Raleway', sans-serif;
+		font-weight: 100;
+		font-size: 19px;
+		opacity: .5;
+	}
+
+	/*         -------------	      */
+
+
+	header {
+
+		height: 1000px;
+		width: 100%;
+		background-image: url('../img/header-bg.png');
+		background-position: top;
+		background-size: 100%;
+		background-repeat: no-repeat;
+		
+		#clickMenu:checked ~ .menuBlock {
+			display: inline-flex;
+		}
+
+		#clickMenu:checked ~ .menu {
+			background-image: url('../img/close.svg');
+			background-size: 120%;
+			background-position: center;
+		}
+
+		
+
+		.menu {
+
+			position: fixed;
+			right: 30px;
+			top: 20px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			z-index: 101;
+			line-height: 90px;
+			width: 90px;
+			height: 90px;
+			text-align: center;
+/*			transition: .2s ease-out;*/
+			cursor: pointer;
+			background-image: url('../img/menu.svg');
+			background-position: center;
+			
+			width: 46px;
+			height: 46px;
+			background-repeat: no-repeat;
+
+			&:hover {
+			}
+
+		}
+
+
+
+
+
+
+		@media (max-width: 800px) {
+			top: 0;
+
+		}
+
+		img {
+			width: 47px;
+			height: auto;
+		}
+	}
+
+	.menuBlock {
+		width: 300px;
+		height: 100vh;
+		position: fixed;
+		display: none;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		background-color: black;
+		top: 0;
+		right: 0;
+		z-index: 100;
+		background-color: rgba(18, 22, 49, 1);
+		box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.25);
+
+		@media (max-width: 600px) {
+			width: 100%;
+		}
+
+
+
+
+		.contactUs {
+
+			width: 80%;
+			height: 48px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			position: absolute;
+			bottom: 30px;
+			border: 1px solid #4F5BAD;
+			box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.25);
+
+			@media (max-height: 400px) {
+				position: static;
+				
+			}
+
+
+
+		}
+
+		a {
+			text-decoration: none;
+			margin: 20px 0px;
+			font-weight: 200;
+			font-size: 18px;
+			transition: .1s;
+
+			@media (max-height: 400px) {
+				margin: 15px 0px;
+				
+			}
+
+			&:hover {
+				opacity: .8;
+				
+			}
+
+		}
+
+	}
+
+	.container {
+		padding-top: 85px;
+	}
+
+	h1 {
+		font-size: 76px;
+		font-weight: 200;
+		color: white;
+		text-align: center;
+		margin-top: 12rem;
+		margin-right: 40px;
+		margin-left: 40px;
+
+
+		@media (max-width: 800px) {
+			font-size: 50px;
+			margin-right: 20px;
+			margin-left: 20px;
+			margin-top: 8rem;
+		}
+	}
+
+}
+
+nav {
+
+	width: 100%;
+
+	.logo {
+		margin: auto;
+		width: 130px;
+		height: 90px;
+
+		img {
+			width: 100%;
+		}
+
+	}
+
+
+	
+	
+
+}
+
+
+
+.mission {
+
+/*	margin-top: 200px;
+	@media (max-width: 600px) {
+		margin-top: 100px;
+	}
+	*/
+
+	.container {
+		position: relative;
+		height: 660px;
+		
+		.lBlock	{
+			position: absolute;
+			display: inline-block;
+			left: 240px;
+			right: 0;
+			z-index: 13;
+			background-image: url("../img/mountains.png");
+			background-size: cover;
+			/*	background-position: center;*/
+			
+			@media (max-width: 920px) {
+
+				top: 0; left: 0; bottom: 0; right: 0;
+				margin: 0 auto;
+
+			}
+
+			@media (max-width: 660px) {
+				max-width: 660px;
+			}
+
+
+		}
+
+		.num-wr {
+
+			margin-right: -24px;
+			top: 200px;
+
+			@media (max-width: 920px) {
+
+				position: absolute;
+				margin-right: -24px;
+				z-index: 20;
+				
+			}
+
+			@media (max-width: 800px) {
+				top: -20px;
+				.num {
+					color: rgba(255, 255, 255, .05);
+				}
+
+			}
+
+		}
+
+		p {
+			top: 300px;
+			position: absolute;
+			max-width: 470px;
+			padding: 16px;
+			right: 0;
+			z-index: 14;
+
+		}
+	}
+}
+
+.letter {
+
+	font-family: 'Raleway', sans-serif;
+	font-size: 1296px;
+	font-weight: 900;
+	color: #191e3f;
+	color: rgba(25, 30, 63, 1);
+	text-shadow: 0px 178px 152px rgba(0, 0, 0, 0.45);
+	position: absolute;
+	opacity: .6;
+
+	@media (max-width: 900px) {
+		/*display: none;*/
+	}
+
+
+
+
+}
+
+.projects {
+	.container {
+
+		@media (max-width: 650px) {
+			text-align: center;
+			.num-wr {
+				float: none;
+				top: -80px;
+			}
+		}
+	}
+
+	margin-top: 300px;
+	padding-top: 70px;
+	width: 100%;
+	background-image: url('../img/projects.png');
+	background-position: top;
+	/*	background-size: 100%;*/
+	height: 1300px;
+	background-repeat: no-repeat;
+	background-blend-mode: lighten;
+
+	@media (max-width: 920px) {
+		background-size: none;
+	}
+	
+	.letter {
+		top: -340px;
+		left: -200px;
+		z-index: 10;
+	}
+
+	.partners {
+
+		display: flex;
+		flex-wrap: wrap;
+		max-width: 960px;
+		position: absolute;
+		z-index: 11;
+		top: 200px;
+
+		@media (max-width: 1100px) {
+			top: 280px;
+		}
+
+		@media (max-width: 650px) {
+			justify-content: center;
+		}
+
+		div {
+			position: relative;
+			margin: 30px 15px;
+			width: 280px;
+			height: 100px;
+			background-position: center;
+			background-size: 80%;
+			background-repeat: no-repeat;
+
+
+			@media (max-width: 650px) {
+				width: 200px;
+				height: 80px;
+				margin: 10px 10px;
+			}
+		}
+
+		.part1 {
+			background-image: url("../img/part1.png");
+
+
+		}
+
+		.part2 {
+			background-image: url("../img/part2.png");
+
+		}
+
+		.part3 {
+			background-image: url("../img/part3.png");
+
+		}	
+
+		.part4 {
+			background-image: url("../img/part4.png");
+
+		}
+
+		.part5 {
+			background-image: url("../img/part5.png");
+
+		}
+
+		.part6 {
+			background-image: url("../img/part6.png");
+
+		}
+
+		
+	}
+
+	.num-wr {
+		float: right;
+		z-index: 11;
+	}
+
+}
+
+
+
+.team {
+
+	/*min-height: 2200px;*/
+	position: relative;
+
+
+	.whiteline {
+		width: 56px;
+		height: 5px;
+		background-color: #fff;
+	}
+
+	.subdesc {
+		width: 320px;
+	}
+
+	h3 {
+		margin: 32px 0 16px 0;
+		white-space: nowrap;
+	}
+	
+	h4 {
+		margin-bottom: 48px;
+		white-space: nowrap;
+	}
+
+	.num-wr {
+		vertical-align: top;
+		margin-top: -100px;
+	}
+
+	.george {
+		text-align: center;
+		display: inline-block;
+		margin-left: 200px;
+		position: relative;
+		z-index: 10;
+		
+
+		.card-info {
+			text-align: left;
+			position: absolute;
+			z-index: 30;
+			left: -160px;
+			bottom: 60px;
+		}
+
+		.lBlock {
+
+			div {
+				width: 660px;
+				height: 660px;
+				background-image: url('../img/george.png');
+				opacity: .2;
+
+				@media (max-width: 650px) {
+					max-width: 660px;
+				}
+			}
+		}
+
+	}
+	
+	.letter {
+		position: absolute;
+		left: 0;
+		right: 0;
+		width: 810px;
+		top: 300px;
+		/* bottom: 0; */
+		margin: auto;
+		z-index: 1;
+	}
+	
+	.kenneth {
+		position: relative;
+		display: inline-block;
+		float: left;
+		margin-top: 160px;
+		margin-right: 20px;
+		vertical-align: top;
+		z-index: 10;
+
+		.card-info {
+			position: absolute;
+			text-align: left;
+			display: inline-block;
+			left: 340px;
+			top: 200px;
+
+			@media (max-width: 1100px) {
+				left: 100px;	
+			}
+		}
+
+		.sBlock{
+			
+			display: inline-block;
+
+			div {
+				width: 400px;
+				height: 400px;
+				background-image: url('../img/kenneth.png');
+				opacity: .2;
+			}
+		}
+	}
+	
+
+
+
+	.richard {
+		position: relative;
+		float: right;
+		display: inline-block;
+		right: 0;
+		margin-top: 280px;
+		margin-left: 20px;
+		z-index: 10;
+
+
+		.card-info {
+			position: absolute;
+			text-align: left;
+			display: inline-block;
+			left: -100px;
+			top: 240px;
+
+			@media (max-width: 1100px) {
+				left: -40px;	
+			}
+		}
+
+		.sBlock{
+			
+			display: inline-block;
+
+			div {
+				width: 400px;
+				height: 400px;
+				background-image: url('../img/richard.png');
+				opacity: .2;
+			}
+		}
+	}
+	.clear {
+		clear: both;
+	}
+
+	.judith {
+		position: relative;
+		display: inline-block;
+		margin-left: 100px;
+		margin-right: 20px;
+		margin-top: 170px;
+		z-index: 10;
+
+		@media (max-width: 1100px) {
+			margin-left: 30px;
+			margin-top: 0px;
+		}
+
+		.card-info {
+			position: absolute;
+			text-align: left;
+			display: inline-block;
+			left: -100px;
+			top: 240px;
+			@media (max-width: 1100px) {
+				left: 20px;	
+			}
+		}
+
+		.sBlock{
+			
+			display: inline-block;
+
+			div {
+				width: 400px;
+				height: 400px;
+				background-image: url('../img/judith.png');
+				opacity: .2;
+			}
+		}
+	}
+	
+
+
+
+	.donald {
+		position: relative;
+		float: right;
+		display: inline-block;
+		margin-right: 100px;
+		margin-top: 360px;
+		z-index: 10;
+
+		@media (max-width: 1100px) {
+			margin-right: 30px;
+			margin-top: 120px;
+		}
+
+		.card-info {
+			position: absolute;
+			text-align: left;
+			display: inline-block;
+			left: 160px;
+			top: 240px;
+
+			@media (max-width: 1100px) {
+				left: 40px;	
+			}
+		}
+
+		.sBlock{
+			
+			display: inline-block;
+
+			div {
+				width: 400px;
+				height: 400px;
+				background-image: url('../img/donald.png');
+				opacity: .2;
+			}
+		}
+	}
+
+
+
+
+}
+
+
+
+
+.event	{
+	margin-top: 400px;
+	background-color: #191e3f;
+	background-image: url('../img/events.png');
+	background-position: bottom;
+	height: 1300px;
+	background-repeat: no-repeat;
+	background-blend-mode: color-dodge;
+
+	@media (max-width: 1100px) {
+		margin-top: 300px;
+	}
+
+	@media (max-width: 900px) {
+		margin-top: 200px;
+	}
+	
+
+	.feel {
+		display: block;
+
+		@media (max-width: 900px) {
+
+			margin: 0 40px;
+			position: relative;
+			z-index: 10;
+		}
+		h1 {
+			font-size: 72px;
+			font-weight: 200;
+			color: white;
+			font-family: 'Raleway', sans-serif;
+			
+
+
+		}
+
+		.desc {
+			max-width: 480px;
+			margin-top: 40px;
+			line-height: 24px;
+			
+
+		}
+
+	}
+
+	.num-wr {
+		display: flex;
+		z-index: 8;
+	}
+
+	.letter	{
+		position: absolute;
+		right: -140px;
+		top: -320px;
+		z-index: 1;
+
+		@media (max-width: 900px) {
+			opacity: 0.4;		
+		}
+
+	}
+}
+
+footer {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	position: relative;
+	height: 60px;
+	top: -160px;
+
+	font-size: 15px;
+	font-weight: 200;
+	color: white;
+	font-family: 'Raleway', sans-serif;
+
+	.f-logo {
+		
+		img {
+			width: 90px;
+			opacity: .2;
+		}
+	}
+
+	.f-menu {
+
+		margin: 28px 0 12px 0;
+		a {
+			margin: 0 10px;
+		}
+	}
+	
+}	
+
+
+@media (max-width: 900px) {
+	.team	{
+
+		text-align: center;
+
+		.richard, .judith, .donald, .kenneth {
+			display: block;
+			float: none;
+			margin-top: 40px;
+			margin: 40px auto;
+			max-width: 400px;
+
+			.sBlock {
+				display: block;
+
+				div {
+					max-width: 400px;
+					width: auto;
+				}
+			}
+			.card-info {
+				left: 20px;
+				bottom: 0;
+				top: auto;
+				
+			}
+		}
+		
+		.num-wr {
+			margin: auto;
+		}
+
+		.george {
+
+			display: block;
+			margin: auto;
+			max-width: 660px;
+
+			.lBlock div {
+				max-width: 660px;
+				width: auto;
+				background-position: center;
+			}
+
+			.card-info {
+				left: 40px;
+				bottom: 40px;
+			}
+		}
+
+	}	
+
+}
