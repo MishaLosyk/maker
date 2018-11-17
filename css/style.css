@@ -348,7 +348,7 @@ nav {
     .team .george .lBlock div {
       width: 660px;
       height: 660px;
-      background-image: url("../img/george.png");
+      background-image: url("../img/George.png");
       opacity: .2; }
       @media (max-width: 650px) {
         .team .george .lBlock div {
